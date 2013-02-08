@@ -16,7 +16,14 @@ group :test, :development do
   gem 'rspec-rails'
 end
 
+group :test do
+  gem 'webmock'
+end
+
 gem 'jquery-rails'
+gem 'nokogiri'
+gem 'rest-client'
+gem 'twitter-bootstrap-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
