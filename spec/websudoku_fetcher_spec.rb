@@ -6,11 +6,11 @@ describe WebsudokuFetcher do
 
   it "fetches a page from websudoku" do
     stub_request(:get, "http://view.websudoku.com/?level=4").to_return(:body => page, :status => 200)
-    fetcher.get.should == page
+    expect(fetcher.get).to eq(page)
   end
 
   it "fetches the correct difficulty level" do
     stub_request(:get, "http://view.websudoku.com/?level=4").to_return(:body => "evil", :status => 200)
-    fetcher.get("4").should == "evil"
+    expect(fetcher.get("4")).to eq("evil")
   end
 end
